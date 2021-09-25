@@ -31,6 +31,7 @@ document.addEventListener('keydown', onEscModalClose);
 
 function onEscModalClose(event) {
     if (event.key === 'Escape') {
+        removeModalEvent()
         closeModal()
     }
     return;
