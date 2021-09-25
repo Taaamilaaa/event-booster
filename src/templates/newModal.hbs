@@ -1,14 +1,17 @@
 <div class="img-container">
-    <img class="modal__img" src="" alt="" />
+    <img class="modal__img" src="{{images.8.url}}" alt="" />
 </div>
 <div class="img-container__big">
-    <img class="img-modal_big" src="" alt="team__twelve_" />
+    <img class="img-modal_big" src="{{images.2.url}}" alt="team__twelve_" />
 </div>
 <ul class="modal__list">
+    {{#if info}}
     <li class="modal__item">
         <h3 class="modal__title">INFO</h3>
-        <p class="modal__text">Lorem, , ipsum , ipsum , ipsum , ipsum</p>
+        <p class="modal__text">{{info}}</p>
     </li>
+    {{/if}}
+    {{#if dates.start}}
     <li class="modal__item">
         <h3 class="modal__title">WHEN</h3>
         <ul class="content__list">
@@ -16,6 +19,7 @@
             <li class="modal__text">houar</li>
         </ul>
     </li>
+    {{/if}}
     <li class="modal__item">
         <h3 class="modal__title">WHERE</h3>
         <ul class="content__list">

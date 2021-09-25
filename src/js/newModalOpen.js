@@ -2,6 +2,7 @@ const refs = {
     closeBtn: document.querySelector('.modal__close-btn'),
     modalOverlay: document.querySelector('.lightbox'),
     eventEl: document.querySelector('.container-list'),
+    modal: document.querySelector('.modal')
 }
 
 refs.eventEl.addEventListener('click', onEventClickModalOpen);
@@ -37,3 +38,4 @@ function closeModal() {
     refs.modalOverlay.classList.add('is-close');
     return;
 }
+

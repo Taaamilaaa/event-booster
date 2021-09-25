@@ -1,7 +1,11 @@
 import newModalTemplate from '../templates/newModal';
+import cardTemplate from '../templates/card-image.hbs';
+
 import ApiService from './api-service';
 import Pagination from 'tui-pagination';
 import { Notify } from 'notiflix';
+
+
 
 
 
@@ -13,8 +17,10 @@ const refs = {
     modal: document.querySelector('.modal'),
     modalOverlay: document.querySelector('.lightbox'),
     eventEl: document.querySelector('.container-list'),
+    closeBtn: document.querySelector('.modal__close-btn'),
 
 }
+
 
 refs.eventEl.addEventListener('click', onEventClickRender);
 
@@ -67,9 +73,7 @@ async function moreAuthorSearch() {
 function renderMoreEvents(event) {
   refs.eventEl.insertAdjacentHTML('beforeend', cardTemplate(event));
 }
-function removeEvents() {
-  refs.eventEl.innerHTML = '';
-}
+
 
 function paginations(data) {
   const options = {
@@ -102,4 +106,23 @@ function paginations(data) {
     apiService.Page = event.page;
     moreAuthorSearch();
   });
+}
+refs.modalOverlay.addEventListener('click', closeModal);
+refs.closeBtn.addEventListener('click', closeModal);
+document.addEventListener('keydown', onEscModalClose);
+
+function onEscModalClose(event) {
+    if (event.key === 'Escape') {
+        closeModal()
+    }
+    return;
+}
+function closeModal() {
+    refs.modalOverlay.classList.remove('is-open');
+    refs.modalOverlay.classList.add('is-close');
+removeEvents()
+    return;
+}
+function removeEvents() {
+  refs.eventEl.innerHTML = '';
 }
