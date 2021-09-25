@@ -1,3 +1,5 @@
+
+
 const refs = {
     closeBtn: document.querySelector('.modal__close-btn'),
     modalOverlay: document.querySelector('.lightbox'),
@@ -33,9 +35,13 @@ function onEscModalClose(event) {
     }
     return;
 }
-function closeModal() {
+export function closeModal() {
     refs.modalOverlay.classList.remove('is-open');
     refs.modalOverlay.classList.add('is-close');
+    removeModalEvent();
     return;
 }
-
+function removeModalEvent() {
+    refs.modal.innerHTML = '';
+    return;
+}

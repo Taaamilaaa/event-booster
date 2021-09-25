@@ -4,11 +4,7 @@ import cardTemplate from '../templates/card-image.hbs';
 import ApiService from './api-service';
 import Pagination from 'tui-pagination';
 import { Notify } from 'notiflix';
-
-
-
-
-
+import closeModal from './newModalOpen'
 
 const apiService = new ApiService();
 let nameEvent = '';
@@ -29,26 +25,31 @@ function onEventClickRender(event) {
     return;
   }
   if (event.target.tagName === 'P') {
-    return;
+    return
     }
+    apiService.id = event.target.parentNode.id || event.target.parentNode.parentNode.id;
     apiServicesRenderId();
-    return;
+    
 }
 
 async function apiServicesRenderId() {
   try {
-    await apiService.fetchApiId().then(res => {
+      await apiService.fetchApiId().then(res => {
       nameEvent = res.data.name;
-      if (typeof res.data === 'object') {
+          if (typeof res.data === 'object') {
+          
         renderEvents(res.data);
       }
     });
   } catch (error) { }
 }
 function renderEvents(event) {
-  refs.modal.insertAdjacentHTML('beforeend', newModalTemplate(event));
-  moreAuthorBtn = document
-    .querySelector('.button-form__inform')
+
+    refs.modal.insertAdjacentHTML('beforeend', newModalTemplate(event));
+    
+
+ let moreAuthorBtn = document
+    .querySelector('.more-author__btn')
     .addEventListener('click', moreAuthorSearch);
 };
 
@@ -60,7 +61,7 @@ async function moreAuthorSearch() {
       if (typeof (res.data._embedded.events) === 'object') {
         removeEvents()
         renderMoreEvents(res.data._embedded.events);
-        closeModalClick()
+        closeModal()
         paginations(res.data.page);
       }
     });
@@ -107,22 +108,8 @@ function paginations(data) {
     moreAuthorSearch();
   });
 }
-refs.modalOverlay.addEventListener('click', closeModal);
-refs.closeBtn.addEventListener('click', closeModal);
-document.addEventListener('keydown', onEscModalClose);
 
-function onEscModalClose(event) {
-    if (event.key === 'Escape') {
-        closeModal()
-    }
-    return;
-}
-function closeModal() {
-    refs.modalOverlay.classList.remove('is-open');
-    refs.modalOverlay.classList.add('is-close');
-removeEvents()
-    return;
-}
+
 function removeEvents() {
   refs.eventEl.innerHTML = '';
 }
