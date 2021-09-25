@@ -4,7 +4,6 @@ import cardTemplate from '../templates/card-image.hbs';
 import ApiService from './api-service';
 import Pagination from 'tui-pagination';
 import { Notify } from 'notiflix';
-import closeModal from './newModalOpen'
 
 const apiService = new ApiService();
 let nameEvent = '';
@@ -44,9 +43,8 @@ async function apiServicesRenderId() {
   } catch (error) { }
 }
 function renderEvents(event) {
-
-    refs.modal.insertAdjacentHTML('beforeend', newModalTemplate(event));
-    
+        removeModalEvent()
+    refs.modal.insertAdjacentHTML('beforeend', newModalTemplate(event));   
 
  let moreAuthorBtn = document
     .querySelector('.more-author__btn')
@@ -112,4 +110,14 @@ function paginations(data) {
 
 function removeEvents() {
   refs.eventEl.innerHTML = '';
+}
+function closeModal() {
+    refs.modalOverlay.classList.remove('is-open');
+    refs.modalOverlay.classList.add('is-close');
+    removeModalEvent();
+    return;
+}
+function removeModalEvent() {
+    refs.modal.innerHTML = '';
+    return;
 }
