@@ -3,16 +3,37 @@ const refs = {
     modalOverlay: document.querySelector('.lightbox'),
     eventEl: document.querySelector('.container-list'),
 }
-console.log(refs.modalOverlay);
-console.log(refs.eventEl);
 
 refs.eventEl.addEventListener('click', onEventClickModalOpen);
 
 function onEventClickModalOpen(event) {
-    console.log('i am hear');
-    if (event.target.className === 'container-list') {
+ if (event.target.className === 'container-list' || event.target.className === 'container-items') {
+    return;
+  }
+  if (event.target.tagName === 'P') {
+    return;
+  }
+    openModal();
+    return;
+}
+function openModal() {
+    refs.modalOverlay.classList.remove('is-close');
+    refs.modalOverlay.classList.add('is-open');
+    return;
+}
 
-        return
+refs.modalOverlay.addEventListener('click', closeModal);
+refs.closeBtn.addEventListener('click', closeModal);
+document.addEventListener('keydown', onEscModalClose);
+
+function onEscModalClose(event) {
+    if (event.key === 'Escape') {
+        closeModal()
     }
-    refs.modalOverlay.classList.add('is-open')
+    return;
+}
+function closeModal() {
+    refs.modalOverlay.classList.remove('is-open');
+    refs.modalOverlay.classList.add('is-close');
+    return;
 }
