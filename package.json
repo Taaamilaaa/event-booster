@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Taaamilaaa.github.io/team__twelve_",
+  "homepage": "https://Taaamilaaa.github.io/event-booster",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /team__twelve_/"
+    "build": "parcel build src/*.html --public-url /event-booster/"
   },
   "repository": {
     "type": "git",
