@@ -1,0 +1,57 @@
+.title {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__title {
+  width: 212px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.22;
+  
+  color: #dc56c5;
+  padding-bottom: 23px;
+  padding-top: 78px;
+
+  @media screen and (min-width: 768px) {
+    width: 353px;
+    font-size: 30px;
+    line-height: 1.23;
+    padding-bottom: 27px;
+    padding-top: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 589px;
+    font-size: 50px;
+    line-height: 1.22;
+    padding-bottom: 52px;
+  }
+}
+
+
+  .hero__title{
+  background: 
+  linear-gradient(90deg,  #d8a7cf , #f39be4,#dc56c5, #f39be4 ); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-size: 3em 3em, 2em 2em;
+  -webkit-animation-name: ani;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 150s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+
+}
+@keyframes ani {
+  0%{
+      background-position: 0 3200px;
+  }
+  100% {
+      background-position: 3200px 0;
+  }
+}
+

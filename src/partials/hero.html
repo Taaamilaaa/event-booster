@@ -1,0 +1,302 @@
+<section class="hero">
+  <div class="hero__container container">
+    <h1 class="hero__title title">FIND BEST EVENTS AROUND THE WORLD</h1>
+    <div class="search">
+      <form action="#" class="search-form container list">
+        <div class="search-string">
+          <input
+            class="input-area"
+            id="js-input-event"
+            type="text"
+            name="query"
+            autocomplete="off"
+            placeholder="Start searching"
+          />
+          <svg class="search-icon__icon-search" width="12" height="12">
+            <use href="./images/sprite.svg#icon-search"></use>
+          </svg>
+        </div>
+
+        <div class="search-string__menu" id="countryMenu">
+          <select
+            class="input-area dropdown"
+            id="js-select-country"
+            type="text"
+            name="query"
+            autocomplete="off"
+            placeholder="Choose country"
+            tabindex=""
+          >
+            <!-- <svg class="search-icon__icon-polygon-down" width="15" height="10">
+              <use href="./images/sprite.svg#icon-polygon-down"></use>
+            </svg> -->
+
+            <option class="dropdown__item" value="">Choose country</option>
+            <option class="dropdown__item" value="US">United States Of America</option>
+            <option class="dropdown__item" value="AD">Andorra</option>
+            <option class="dropdown__item" value="AI">Anguilla</option>
+            <option class="dropdown__item" value="AR">Argentina</option>
+            <option class="dropdown__item" value="AU">Australia</option>
+            <option class="dropdown__item" value="AT">Austria</option>
+            <option class="dropdown__item" value="AZ">Azerbaijan</option>
+            <option class="dropdown__item" value="BS">Bahamas</option>
+            <option class="dropdown__item" value="BH">Bahrain</option>
+            <option class="dropdown__item" value="BB">Barbados</option>
+            <option class="dropdown__item" value="BE">Belgium</option>
+            <option class="dropdown__item" value="BM">Bermuda</option>
+            <option class="dropdown__item" value="BR">Brazil</option>
+            <option class="dropdown__item" value="BG">Bulgaria</option>
+            <option class="dropdown__item" value="CA">Canada</option>
+            <option class="dropdown__item" value="CL">Chile</option>
+            <option class="dropdown__item" value="CN">China</option>
+            <option class="dropdown__item" value="CO">Colombia</option>
+            <option class="dropdown__item" value="CR">Costa Rica</option>
+            <option class="dropdown__item" value="HR">Croatia</option>
+            <option class="dropdown__item" value="CY">Cyprus</option>
+            <option class="dropdown__item" value="CZ">Czech Republic</option>
+            <option class="dropdown__item" value="DK">Denmark</option>
+            <option class="dropdown__item" value="DO">Dominican Republic</option>
+            <option class="dropdown__item" value="EC">Ecuador</option>
+            <option class="dropdown__item" value="EE">Estonia</option>
+            <option class="dropdown__item" value="FO">Faroe Islands</option>
+            <option class="dropdown__item" value="FI">Finland</option>
+            <option class="dropdown__item" value="FR">France</option>
+            <option class="dropdown__item" value="GE">Georgia</option>
+            <option class="dropdown__item" value="DE">Germany</option>
+            <option class="dropdown__item" value="GH">Ghana</option>
+            <option class="dropdown__item" value="GI">Gibraltar</option>
+            <option class="dropdown__item" value="GB">Great Britain</option>
+            <option class="dropdown__item" value="GR">Greece</option>
+            <option class="dropdown__item" value="HK">Hong Kong</option>
+            <option class="dropdown__item" value="HU">Hungary</option>
+            <option class="dropdown__item" value="IS">Iceland</option>
+            <option class="dropdown__item" value="IN">India</option>
+            <option class="dropdown__item" value="IE">Ireland</option>
+            <option class="dropdown__item" value="IL">Israel</option>
+            <option class="dropdown__item" value="IT">Italy</option>
+            <option class="dropdown__item" value="JM">Jamaica</option>
+            <option class="dropdown__item" value="JP">Japan</option>
+            <option class="dropdown__item" value="KR">Korea, Republic of</option>
+            <option class="dropdown__item" value="LV">Latvia</option>
+            <option class="dropdown__item" value="LB">Lebanon</option>
+            <option class="dropdown__item" value="LT">Lithuania</option>
+            <option class="dropdown__item" value="LU">Luxembourg</option>
+            <option class="dropdown__item" value="MY">Malaysia</option>
+            <option class="dropdown__item" value="MT">Malta</option>
+            <option class="dropdown__item" value="MX">Mexico</option>
+            <option class="dropdown__item" value="MC">Monaco</option>
+            <option class="dropdown__item" value="ME">Montenegro</option>
+            <option class="dropdown__item" value="MA">Morocco</option>
+            <option class="dropdown__item" value="NL">Netherlands</option>
+            <option class="dropdown__item" value="AN">Netherlands Antilles</option>
+            <option class="dropdown__item" value="NZ">New Zealand</option>
+            <option class="dropdown__item" value="ND">Northern Ireland</option>
+            <option class="dropdown__item" value="NO">Norway</option>
+            <option class="dropdown__item" value="PE">Peru</option>
+            <option class="dropdown__item" value="PL">Poland</option>
+            <option class="dropdown__item" value="PT">Portugal</option>
+            <option class="dropdown__item" value="RO">Romania</option>
+            <option class="dropdown__item" value="RU">Russian Federation</option>
+            <option class="dropdown__item" value="LC">Saint Lucia</option>
+            <option class="dropdown__item" value="SA">Saudi Arabia</option>
+            <option class="dropdown__item" value="RS">Serbia</option>
+            <option class="dropdown__item" value="SG">Singapore</option>
+            <option class="dropdown__item" value="SK">Slovakia</option>
+            <option class="dropdown__item" value="SI">Slovenia</option>
+            <option class="dropdown__item" value="ZA">South Africa</option>
+            <option class="dropdown__item" value="ES">Spain</option>
+            <option class="dropdown__item" value="SE">Sweden</option>
+            <option class="dropdown__item" value="CH">Switzerland</option>
+            <option class="dropdown__item" value="TW">Taiwan</option>
+            <option class="dropdown__item" value="TH">Thailand</option>
+            <option class="dropdown__item" value="TT">Trinidad and Tobago</option>
+            <option class="dropdown__item" value="TR">Turkey</option>
+            <option class="dropdown__item" value="UA">Ukraine</option>
+            <option class="dropdown__item" value="AE">United Arab Emirates</option>
+            <option class="dropdown__item" value="UY">Uruguay</option>
+            <option class="dropdown__item" value="VE">Venezuela</option>
+          </select>
+
+          <!-- <input
+            class="input-area"
+            id="js-input-country"
+            type="hidden"
+            name="query"
+            autocomplete="off"
+            placeholder="Choose country"
+          /> -->
+          <!-- <svg class="search-icon__icon-polygon-down" width="15" height="10">
+            <use href="./images/sprite.svg#icon-polygon-down"></use>
+          </svg> -->
+          <!-- <ul class="dropdown list">
+            <li class="dropdown__item" data-value="US">United States Of America</li>
+
+            <li class="dropdown__item" data-value="AD">Andorra</li>
+
+            <li class="dropdown__item" data-value="AI">Anguilla</li>
+
+            <li class="dropdown__item" data-value="AR">Argentina</li>
+
+            <li class="dropdown__item" data-value="AU">Australia</li>
+
+            <li class="dropdown__item" data-value="AT">Austria</li>
+
+            <li class="dropdown__item" data-value="AZ">Azerbaijan</li>
+
+            <li class="dropdown__item" data-value="BS">Bahamas</li>
+
+            <li class="dropdown__item" data-value="BH">Bahrain</li>
+
+            <li class="dropdown__item" data-value="BB">Barbados</li>
+
+            <li class="dropdown__item" data-value="BE">Belgium</li>
+
+            <li class="dropdown__item" data-value="BM">Bermuda</li>
+
+            <li class="dropdown__item" data-value="BR">Brazil</li>
+
+            <li class="dropdown__item" data-value="BG">Bulgaria</li>
+
+            <li class="dropdown__item" data-value="CA">Canada</li>
+
+            <li class="dropdown__item" data-value="CL">Chile</li>
+
+            <li class="dropdown__item" data-value="CN">China</li>
+
+            <li class="dropdown__item" data-value="CO">Colombia</li>
+
+            <li class="dropdown__item" data-value="CR">Costa Rica</li>
+
+            <li class="dropdown__item" data-value="HR">Croatia</li>
+
+            <li class="dropdown__item" data-value="CY">Cyprus</li>
+
+            <li class="dropdown__item" data-value="CZ">Czech Republic</li>
+
+            <li class="dropdown__item" data-value="DK">Denmark</li>
+
+            <li class="dropdown__item" data-value="DO">Dominican Republic</li>
+
+            <li class="dropdown__item" data-value="EC">Ecuador</li>
+
+            <li class="dropdown__item" data-value="EE">Estonia</li>
+
+            <li class="dropdown__item" data-value="FO">Faroe Islands</li>
+
+            <li class="dropdown__item" data-value="FI">Finland</li>
+
+            <li class="dropdown__item" data-value="FR">France</li>
+
+            <li class="dropdown__item" data-value="GE">Georgia</li>
+
+            <li class="dropdown__item" data-value="DE">Germany</li>
+
+            <li class="dropdown__item" data-value="GH">Ghana</li>
+
+            <li class="dropdown__item" data-value="GI">Gibraltar</li>
+
+            <li class="dropdown__item" data-value="GB">Great Britain</li>
+
+            <li class="dropdown__item" data-value="GR">Greece</li>
+
+            <li class="dropdown__item" data-value="HK">Hong Kong</li>
+
+            <li class="dropdown__item" data-value="HU">Hungary</li>
+
+            <li class="dropdown__item" data-value="IS">Iceland</li>
+
+            <li class="dropdown__item" data-value="IN">India</li>
+
+            <li class="dropdown__item" data-value="IE">Ireland</li>
+
+            <li class="dropdown__item" data-value="IL">Israel</li>
+
+            <li class="dropdown__item" data-value="IT">Italy</li>
+
+            <li class="dropdown__item" data-value="JM">Jamaica</li>
+
+            <li class="dropdown__item" data-value="JP">Japan</li>
+
+            <li class="dropdown__item" data-value="KR">Korea, Republic of</li>
+
+            <li class="dropdown__item" data-value="LV">Latvia</li>
+
+            <li class="dropdown__item" data-value="LB">Lebanon</li>
+
+            <li class="dropdown__item" data-value="LT">Lithuania</li>
+
+            <li class="dropdown__item" data-value="LU">Luxembourg</li>
+
+            <li class="dropdown__item" data-value="MY">Malaysia</li>
+
+            <li class="dropdown__item" data-value="MT">Malta</li>
+
+            <li class="dropdown__item" data-value="MX">Mexico</li>
+
+            <li class="dropdown__item" data-value="MC">Monaco</li>
+
+            <li class="dropdown__item" data-value="ME">Montenegro</li>
+
+            <li class="dropdown__item" data-value="MA">Morocco</li>
+
+            <li class="dropdown__item" data-value="NL">Netherlands</li>
+
+            <li class="dropdown__item" data-value="AN">Netherlands Antilles</li>
+
+            <li class="dropdown__item" data-value="NZ">New Zealand</li>
+
+            <li class="dropdown__item" data-value="ND">Northern Ireland</li>
+
+            <li class="dropdown__item" data-value="NO">Norway</li>
+
+            <li class="dropdown__item" data-value="PE">Peru</li>
+
+            <li class="dropdown__item" data-value="PL">Poland</li>
+
+            <li class="dropdown__item" data-value="PT">Portugal</li>
+
+            <li class="dropdown__item" data-value="RO">Romania</li>
+
+            <li class="dropdown__item" data-value="RU">Russian Federation</li>
+
+            <li class="dropdown__item" data-value="LC">Saint Lucia</li>
+
+            <li class="dropdown__item" data-value="SA">Saudi Arabia</li>
+
+            <li class="dropdown__item" data-value="RS">Serbia</li>
+
+            <li class="dropdown__item" data-value="SG">Singapore</li>
+
+            <li class="dropdown__item" data-value="SK">Slovakia</li>
+
+            <li class="dropdown__item" data-value="SI">Slovenia</li>
+
+            <li class="dropdown__item" data-value="ZA">South Africa</li>
+
+            <li class="dropdown__item" data-value="ES">Spain</li>
+
+            <li class="dropdown__item" data-value="SE">Sweden</li>
+
+            <li class="dropdown__item" data-value="CH">Switzerland</li>
+
+            <li class="dropdown__item" data-value="TW">Taiwan</li>
+
+            <li class="dropdown__item" data-value="TH">Thailand</li>
+
+            <li class="dropdown__item" data-value="TT">Trinidad and Tobago</li>
+
+            <li class="dropdown__item" data-value="TR">Turkey</li>
+
+            <li class="dropdown__item" data-value="UA">Ukraine</li>
+
+            <li class="dropdown__item" data-value="AE">United Arab Emirates</li>
+
+            <li class="dropdown__item" data-value="UY">Uruguay</li>
+
+            <li class="dropdown__item" data-value="VE">Venezuela</li>
+          </ul> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

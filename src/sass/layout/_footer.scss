@@ -1,0 +1,162 @@
+.footer {
+  display: block;
+  justify-content: center;
+
+  padding-top: 67px;
+  padding-bottom: 27px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 65px;
+    padding-bottom: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 85px;
+  }
+}
+
+.isShowBtn {
+  cursor: pointer;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+.isShowBtn:hover {
+  animation: bounce 1s;
+}
+
+.footer-container {
+  display: flex;
+  padding-left: 34px;
+  padding-right: 34px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 123px;
+    padding-right: 123px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 374px;
+    padding-right: 374px;
+  }
+}
+
+.footer-all-rights {
+  font-size: 13px;
+
+  line-height: 1.22;
+  text-align: center;
+
+  color: #939393;
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 1.22;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.footer-heart {
+  color: #da3838;
+}
+
+.circle-3 {
+  display: none;
+  animation: animate 0.4s infinite;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #121212;
+  @media screen and (min-width: 768px) {
+    display: block;
+    background: linear-gradient(#121212 48%, transparent 50%);
+  }
+  @media screen and (min-width: 1280px) {
+    display: block;
+    height: 136px;
+    width: 136px;
+    background: linear-gradient(#121212 48%, transparent 50%);
+  }
+}
+
+@keyframes animate {
+  25% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  35% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.01);
+  }
+  0% {
+    transform: scale(1.01);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  15% {
+    transform: scale(1.07);
+  }
+  25% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  35% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.01);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  35% {
+    transform: scale(1.07);
+  }
+  25% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  35% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1.01);
+  }
+}

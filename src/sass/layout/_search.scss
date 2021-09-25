@@ -1,0 +1,128 @@
+.input-area {
+  position: relative;
+  display: block;
+  width: 270px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  border-width: 0px;
+  border-style: none;
+  outline: none;
+
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-indent: 30px;
+  padding: 0px;
+  // color: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-style: none;
+  }
+}
+
+.search-string {
+  display: block;
+  position: relative;
+  // &__menu {
+  //   display: block;
+  //   position: relative;
+  // }
+}
+
+.dropdown {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  // color: #ffffff;
+  // padding-top: 20px;
+  // margin-top: 20px;
+
+  // &__item {
+  //   margin-top: 5px;
+  //   cursor: pointer;
+  // }
+  // &.open::after {
+  //   transform: translateY(50%) rotate(180deg);
+  // }
+}
+
+select {
+  color: rgba(255, 255, 255, 0.2);
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
+  overflow: hidden;
+  background-image: url('../images/sprite.svg#icon-polygon-down') no-repeat right;
+  background-position-x: calc(100% - 30px);
+}
+
+select > option {
+  border-radius: 20px;
+  background-color: rgb(54, 53, 53);
+}
+
+.search-icon {
+  &__icon-search {
+    position: absolute;
+    display: block;
+    top: 14px;
+    bottom: 14px;
+    right: 30px;
+  }
+  &__icon-polygon-down {
+    position: absolute;
+    display: block;
+    top: 15px;
+    bottom: 15px;
+    right: 30px;
+  }
+}
+
+// .search-string__menu ul {
+//   margin: 0;
+//   list-style: none;
+//   padding-left: 20px;
+//   display: none;
+// }
+
+// .search-string__menu.open ul {
+//   display: block;
+//   z-index: 1;
+// }
+@media screen and (min-width: 320px) {
+  .search-string {
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-string {
+    display: block;
+    padding-bottom: 27px;
+  }
+  .search-string:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .search-string {
+    padding-bottom: 52px;
+  }
+}

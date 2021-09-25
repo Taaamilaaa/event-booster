@@ -1,0 +1,25 @@
+.logo {
+  @media screen and (min-width: 320px) {
+    width: 106px;
+    height: 90px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 177px;
+    height: 155px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 240px;
+    height: 200px;
+  }
+}
+.logo-container {
+  position: absolute;
+
+  background: url(../images/hero/bg-logo_mobile.png) no-repeat;
+  @media screen and (min-width: 768px) {
+    background: url(../images/hero/bg-logo_tablet.png) no-repeat;
+  }
+  @media screen and (min-width: 1280px) {
+    background: url(../images/hero/bg-logo_desktop.png) no-repeat;
+  }
+}

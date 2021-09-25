@@ -1,0 +1,53 @@
+.main-card-container {
+  width: 280px;
+  // height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 610px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 946px;
+  }
+}
+
+// .card-container {
+// background-image: url(../images/background/bg_body_mobile.png);
+// background-size: cover;
+// background-position: center;
+// background-repeat: no-repeat;
+
+// @media (min-device-pixel-ratio: 2), (min-resolution: 195dpi), (min-resolution: 2dppx) {
+//   background-image: url(../images/background/bg_body@2x_mobile.png);
+// }
+
+// @media screen and (min-width: 320px) {
+//   max-width: 320px;
+//   height: 2786px;
+//   background-image: url(../images/background/bg_body_tablet.png);
+
+//   @media (min-device-pixel-ratio: 2), (min-resolution: 195dpi), (min-resolution: 2dppx) {
+//     background-image: url(../images/background/bg_body@2x_tablet.png);
+//   }
+// }
+// @media screen and (min-width: 768px) {
+//   max-width: 768px;
+//   height: 2582px;
+//   background-image: url(../images/background/bg_body_desktop.png);
+
+//   @media (min-device-pixel-ratio: 2), (min-resolution: 195dpi), (min-resolution: 2dppx) {
+//     background-image: url(../images/background/bg_body@2x_desktop.png);
+//   }
+// }
+// @media screen and (min-width: 1280px) {
+//   max-width: 1280px;
+//   height: 1930px;
+// }
+// }
+.is-hidden-tui {
+  display: none;
+}
+.is-visible-tui {
+  display: block;
+}

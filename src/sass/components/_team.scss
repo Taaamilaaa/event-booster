@@ -1,0 +1,209 @@
+/*Модальное окно Презентация команды*/
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0px;
+  z-index: 120;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team__modal {
+  padding: 30px;
+  width: 100%;
+  max-width: 650px;
+  min-height: 400px;
+  position: absolute;
+  z-index: 150;
+  top: 50%;
+  left: 50%;
+  background-image: url(../images/team/team_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: rgba(27, 27, 26, 0.9);
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(246, 219, 247, 0.12), 0px 4px 4px rgba(246, 219, 247, 0.06),
+    1px 4px 6px rgba(246, 219, 247, 0.16);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 320px) {
+    max-width: 200px;
+    min-height: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 600px;
+    min-height: 450px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1000px;
+    min-height: 450px;
+  }
+}
+.modal__btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  }
+
+  &:hover .modal__btn-close-icon {
+    fill: #dc56c5;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.modal__team-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: #dc56c5;
+}
+
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   // visibility: hidden;
+//   pointer-events: none;
+//   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+.modal_team-container {
+  opacity: 0;
+  // visibility: hidden;
+  pointer-events: none;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__team {
+  z-index: 10;
+  background-color: transparent;
+  border: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+/* Фото */
+
+.team__list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.team__item {
+  display: flex;
+  flex-basis: calc((100% - 30px * var(--grid__item)) / var(--grid__item));
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid rgba(220, 86, 197, 0.3);
+  box-sizing: border-box;
+  border-radius: 50px 0px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px rgba(246, 219, 247, 0.12), 0px 4px 4px rgba(246, 219, 247, 0.06),
+    1px 4px 6px rgba(246, 219, 247, 0.16);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (min-width: 320px) {
+  --grid__item: 1;
+  max-width: 300px;
+  height: 200px;
+  }
+
+  @media screen and (min-width: 768px) {
+    --grid__item: 3;
+    max-width: 300px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --grid__item: 5;
+    max-width: 300px;
+  }
+}
+.team__link {
+  text-decoration: none;
+}
+
+.team__image {
+  width: 200px;
+  height: 200px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+  }
+}
+.team__box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #d6cdd5;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-top: none;
+  box-shadow: 0px 2px 3px rgba(160, 13, 165, 0.226), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(160, 13, 165, 0.2);
+  width: 200px;
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 200px;
+  }
+}
+.team__header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #530847;
+  padding: 0;
+}
+.team__description {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #dc56c5;
+  padding: 0;
+  margin: 0;
+}
